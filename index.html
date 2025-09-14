@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transition, Animations, and Advanced JavaScript Functions</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="top_tabs">
+        <!-- header -->
+            <div class="logo"><h1>The fade-in-out Text.</h1></div>
+            <a href="#home" class="hlink">Home</a>
+            <a href="#collection" class="hlink">Collection</a>
+            <a href="#contact" class="hlink">Contact</a>
+        </header>
+        <main class="main_area">
+        <!-- main section -->
+            <!-- changing colors on hover elements -->
+            <div class="Row1">
+                <button class="colorBtn">Change Color</button>
+                <button class="sizeBtn">Scale Up Btn</button>
+            </div>
+            <!-- calculator -->
+            <div class="Row2">
+                <table border="1">
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="inputBox" value="0"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="digitButton" onclick="digitBtn(7)">7</td>
+                        <td class="digitButton" onclick="digitBtn(8)">8</td>
+                        <td class="digitButton" onclick="digitBtn(9)">9</td>
+                        <td class="operatorButton" onclick="operatorBtn('X')">X</td>
+                    </tr>
+                    <tr>
+                        <td class="digitButton" onclick="digitBtn(4)">4</td>
+                        <td class="digitButton" onclick="digitBtn(5)">5</td>
+                        <td class="digitButton" onclick="digitBtn(6)">6</td>
+                        <td class="operatorButton" onclick="operatorBtn('-')">-</td>
+                    </tr>
+                    <tr>
+                        <td class="digitButton" onclick="digitBtn(1)">1</td>
+                        <td class="digitButton" onclick="digitBtn(2)">2</td>
+                        <td class="digitButton" onclick="digitBtn(3)">3</td>
+                        <td class="operatorButton" onclick="operatorBtn('+')">+</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="digitButton" onclick="digitBtn(0)">0</td>
+                        <td class="ACButton" onclick="btnAC()">AC</td>
+                        <td class="operatorButton" onclick="operatorBtn('/')">/</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="operatorButton" onclick="equalsBtn()">=</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- the beating heart -->
+            <div class="Row3">
+                <div class="heart"></div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <h2>Front side.</h2>
+                    </div>
+                    <div class="back">
+                        <h2>Back side.</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- the beating heart -->
+            <div class="Row4">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter name"><br>
+                <label for="colour">Color</label>
+                <input type="text" id="colour" name="colour" placeholder="Enter favourite color"><br>
+                <label for="fnumber">Number</label>
+                <input type="number" id="fnumber" name="fnumber" placeholder="Enter favourite Number"><br>
+                <button type="button" onclick="displayInfo()" class="diplayBtn">Display</button>
+                <div class="display" id="display"><h4>***** INFO ENTERED *****</h4></div>
+            </div>
+            
+        </main>
+        <footer class="bottom_tabs">
+        <!-- footer -->
+            <a href="#location" class="hlink">Location</a>
+            <a href="#feedback" class="hlink">Feedback</a>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

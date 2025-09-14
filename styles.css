@@ -1,0 +1,174 @@
+.logo{
+    color: wheat;
+    background-color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: fade-in-out 3s infinite;
+}
+@keyframes fade-in-out{
+    0%{opacity: 0; }
+    50%{opacity: 1; }
+    100%{opacity: 0; }
+}
+.hlink{
+    width: 25px;
+    height: 15px;
+    font-family: Helvetica;
+    transition: color 0.5s ease-in-out;
+    color:green;
+    text-decoration: none
+}
+.hlink:hover{
+    color: darkred;
+}
+.main_area{
+    display: grid;
+    grid-template: 1fr 1fr;
+    
+    
+}
+.colorBtn, .diplayBtn{
+    background-color: aqua;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5 ease-in-out;
+}
+.colorBtn:hover{
+    background-color: deeppink;
+    transform: scale(1);
+}
+.sizeBtn{
+    background-color: aqua;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px; 
+    transition: width 0.5s ease,height 0.5s ease, background-color 0.3s ease;
+}
+.sizeBtn:hover{
+    width: 120px;
+    height: 60px;
+    background-color: hotpink;
+}
+
+/** The heart**/
+.heart {
+    background-color: darkred;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-45deg);
+    margin: 50px auto;
+    animation: heartbeat 2s infinite alternate;
+}
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    border-radius: 50%;
+}
+/**Position the top left & top right circles**/
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+.heart::after {
+    left: 50px;
+    top: 0;
+}
+@keyframes heartbeat{
+    0% {transform: rotate(-45deg) scale(1); }
+    50% {transform: rotate(-45deg) scale(1.1); }
+    100% {transform: rotate(-45deg) scale(1); }
+}
+.card-container{
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 40px auto;
+}
+.card{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.front{
+    background-color: #007bff;
+    color: #ffffff;
+}
+.back{
+    background-color: #ffffff;
+    color: #000000;
+    transform: rotateY(180deg);
+}
+.card.flipped{
+    transform: rotateY(180deg);
+}
+/** Styling the calculator**/
+table{
+    color: #ffff;
+    text-align: center;
+    border-collapse: collapse;
+    font: normal Arial, Sans-serif;
+}
+tr{
+    height: 3.5vh;
+    background-color: #4e494d;
+}
+td{
+    width: 14vw;
+    border: 1px solid #4e494d;
+}
+#inputBox{
+    background-color: #4e494d;
+    text-align: right;
+    width: 100%;
+    font-size: 1.02em;
+    color: #fff;
+}
+.digitButton{
+    background-color: #807e80;
+}
+.operatorButton{
+    background-color: #ff9e06;
+}
+.ACButton{
+    background-color: #656165;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
